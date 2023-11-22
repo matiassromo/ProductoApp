@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProductoAppMovil2.DetalleProductoPage"
+             Title="DetalleProductoPage">
+    <VerticalStackLayout BackgroundColor="DarkSlateGray">
+        <Image Source="world2.png"
+               HorizontalOptions="Center"
+               HeightRequest="100"
+               WidthRequest="100"
+               Margin="10"/>
+        <Label x:Name="Nombre"
+               Text="Nombre:"
+               FontSize="25"/>
+        <Label x:Name="Cantidad"
+               Text="Cantidad:"
+               FontSize="25"/>
+        <Label x:Name="Descripcion"
+               Text="Descripcion:"
+               FontSize="25"/>
+        <Button Text="Volver"
+                TextColor="Black"
+                FontAttributes="Bold"
+                BackgroundColor="Aquamarine"
+                Clicked="OnClickVolver"
+                FontSize="17"
+                Margin="12"/>
+    </VerticalStackLayout>
+</ContentPage>

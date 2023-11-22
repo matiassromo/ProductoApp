@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductoAppMovil2.Models
 {
-    class Producto
+    public class Producto
     {
         public int IdProducto { get; set; }
         public string Nombre { get; set; }

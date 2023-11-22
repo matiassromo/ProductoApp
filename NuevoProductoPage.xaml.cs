@@ -25,5 +25,7 @@ public partial class NuevoProductoPage : ContentPage
             Cantidad = Int32.Parse(Cantidad.Text)
         };
         Utils.Utils.listaProductos.Add(producto);
+
+        await Navigation.PopAsync();
     }
 }

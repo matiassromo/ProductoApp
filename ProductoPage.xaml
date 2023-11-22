@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProductoAppMovil2.ProductoPage"
              Title="ProductoPage">
+
     <VerticalStackLayout BackgroundColor="DarkSlateGrey">
         <HorizontalStackLayout 
             HorizontalOptions="Center">
@@ -10,7 +11,7 @@
                    HeightRequest="80"
                    WidthRequest="80"
                    Aspect="Fill"
-                   Margin="10"></Image>
+                   Margin="2"></Image>
         </HorizontalStackLayout>
         <Label HorizontalOptions="Center"
                Text="ProductoApp"
@@ -21,9 +22,10 @@
                 FontAttributes="Bold"
                 FontSize="16"
                 Clicked="OnNuevoProducto"
-                Margin="20"></Button>
+                Margin="15"></Button>
         <ListView x:Name="listaProductos"
-                  RowHeight="80">
+                  RowHeight="80"
+                  ItemSelected="OnClickDetalleProducto">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
