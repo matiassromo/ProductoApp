@@ -9,7 +9,8 @@
             <Image Source="world2.png"
                    HeightRequest="80"
                    WidthRequest="80"
-                   Aspect="Fill"></Image>
+                   Aspect="Fill"
+                   Margin="10"></Image>
         </HorizontalStackLayout>
         <Label HorizontalOptions="Center"
                Text="ProductoApp"
@@ -19,8 +20,31 @@
                 TextColor="Black"
                 FontAttributes="Bold"
                 FontSize="16"
-                ScaleX="0.85"
-                Clicked="OnNuevoProducto"></Button>
+                Clicked="OnNuevoProducto"
+                Margin="20"></Button>
+        <ListView x:Name="listaProductos"
+                  RowHeight="80">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="world2.png"
+                                   HeightRequest="60"
+                                   WidthRequest="90"></Image>
+                            <StackLayout Orientation="Vertical"
+                                         Margin="14">
+                                <Label Text="{Binding Nombre}"
+                                    FontSize="20"></Label>
+                                <Label Text="{Binding Cantidad}"
+                                    FontSize="15"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
        
     </VerticalStackLayout>
 </ContentPage>
