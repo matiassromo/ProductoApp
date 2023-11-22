@@ -31,9 +31,12 @@ public partial class ProductoPage : ContentPage
 
     private async void OnClickDetalleProducto(object sender, SelectedItemChangedEventArgs e)
     {
-		var toast = Toast.Make("CLICK", ToastDuration.Short);
-		await toast.Show();
+		/*var toast = Toast.Make("CLICK", ToastDuration.Short);
+		await toast.Show();*/
 		Producto producto = e.SelectedItem as Producto;
-		await Navigation.PushAsync(new DetalleProductoPage(producto));
+		await Navigation.PushAsync(new DetalleProductoPage(){
+
+			BindingContext = producto,
+		});;
     }
 }

@@ -11,19 +11,43 @@
                Margin="10"/>
         <Label x:Name="Nombre"
                Text="Nombre:"
-               FontSize="25"/>
-        <Label x:Name="Cantidad"
-               Text="Cantidad:"
-               FontSize="25"/>
-        <Label x:Name="Descripcion"
-               Text="Descripcion:"
-               FontSize="25"/>
-        <Button Text="Volver"
-                TextColor="Black"
-                FontAttributes="Bold"
-                BackgroundColor="Aquamarine"
-                Clicked="OnClickVolver"
-                FontSize="17"
-                Margin="12"/>
+               FontSize="25"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+        <StackLayout Orientation="Horizontal"
+                     Margin="5">
+            <Label Text="Cantidad: "
+                    FontSize="20"
+                   FontAttributes="Bold"/>
+            <Label  x:Name="Cantidad"
+                    Text="Cantidad"
+                    FontSize="20"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Margin="5">
+            <Label Text="Descripcion: "
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <Label x:Name="Descripcion"
+                   Text="Descripcion"
+                   FontSize="20"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Editar"
+                     TextColor="Black"
+                     FontAttributes="Bold"
+                     BackgroundColor="Beige"
+                     Clicked="OnClickEditarProducto"
+                     FontSize="17"
+                     Margin="18" />
+            <Button Text="Eliminar"
+                     TextColor="Black"
+                     FontAttributes="Bold"
+                     BackgroundColor="Red"
+                     Clicked="OnClickEliminarProducto"
+                     FontSize="17"
+                     Margin="18"/>
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>
