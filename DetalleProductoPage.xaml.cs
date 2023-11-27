@@ -1,3 +1,5 @@
+using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
 using ProductoAppMovil2.Models;
 
 namespace ProductoAppMovil2;
@@ -37,6 +39,8 @@ public partial class DetalleProductoPage : ContentPage
         if (confirmEliminar)
         {
             Utils.Utils.listaProductos.Remove(_producto);
+            var toast = Toast.Make("Producto Eliminado", ToastDuration.Short, 10);
+            await toast.Show();
             await Navigation.PopAsync();
         }    }
 

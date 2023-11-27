@@ -35,7 +35,6 @@ public partial class ProductoPage : ContentPage
 		await toast.Show();*/
 		Producto producto = e.SelectedItem as Producto;
 		await Navigation.PushAsync(new DetalleProductoPage(){
-
 			BindingContext = producto,
 		});;
     }

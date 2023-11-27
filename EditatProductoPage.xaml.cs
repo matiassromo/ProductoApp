@@ -1,3 +1,4 @@
+using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using ProductoAppMovil2.Models;
 
@@ -28,6 +29,9 @@ public partial class EditatProductoPage : ContentPage
             _producto.Nombre = Nombre.Text;
             _producto.Cantidad = Int32.Parse(Cantidad.Text);
             _producto.Descripcion = Descripcion.Text;
+
+            var toast = Toast.Make("Producto Editado", ToastDuration.Short, 10);
+            await toast.Show();
         }
         else
         {

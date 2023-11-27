@@ -14,7 +14,6 @@ public partial class NuevoProductoPage : ContentPage
     private async void OnClickNuevoProducto(object sender, EventArgs e)
     {
         var toast = Toast.Make("Producto Creado", ToastDuration.Short, 10);
-
         await toast.Show();
 
         Producto producto = new Producto
